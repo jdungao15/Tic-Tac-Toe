@@ -102,5 +102,11 @@ function checkForWinner(player) {
   }
 
   //Check for winner Horizontal
+  for (const val of board) {
+    if (player == val[0] && player == val[1] && player == val[2]) {
+      return true;
+    }
+  }
+
   
 }
