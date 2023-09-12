@@ -83,10 +83,8 @@ function handleClick(evt) {
 // Reset the board
 function resetBoard() {
   const cells = document.querySelectorAll(".cell");
-  console.log(cells);
-  console.log(cells[0].textContent);
   for (let i = 0; i < cells.length; i++) {
-    // cells[i].textContent = "";
+    cells[i].textContent = "";
     cells[i].addEventListener("click", handleClick);
   }
 }
@@ -101,12 +99,16 @@ function checkForWinner(player) {
     return true;
   }
 
-  //Check for winner Horizontal
+  //Check for Horizontal Winner
   for (const val of board) {
     if (player == val[0] && player == val[1] && player == val[2]) {
       return true;
     }
   }
-
-  
+  // Check for Vertical Winner
+  for (const i in board) {
+    if (player == board[0][i] && player == board[1][i] && board[2][i]) {
+      return true;
+    }
+  }
 }
