@@ -1,26 +1,3 @@
-/**
- *
- * TODO:
- *  //Create a board
- *  //3x3 grid
- *  //Able to switch players
- *      -Display the current player
- *  //Place a mark on the board
- *  - Check for a winner
- *      - Display the winner
- *  - Check for a tie
- *      - Display the tie
- *  //- Reset the game
- *      //- Clear the board
- *  - 
- * 
- * 
- * 
-    
- *
- *
- *
- */
 // State
 let turn = true;
 let player = "X";
@@ -111,6 +88,8 @@ function resetBoardUI() {
   resetBoardState();
   document.getElementById("player-label").textContent = "";
 }
+
+
 
 // check for a winner
 function checkForWinner(player) {

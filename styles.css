@@ -3,6 +3,7 @@ html {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Indie Flower", cursive;
 }
 main {
   text-align: center;
@@ -19,14 +20,33 @@ main {
 .cell {
   width: 100px;
   height: 100px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: 40px;
   text-align: center;
   vertical-align: middle;
   line-height: 100px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 #btn-reset {
   margin: 30px auto;
   text-align: center;
+}
+
+#cell-one {
+  border-style: none solid solid none;
+}
+#cell-two {
+  border-style: none none solid solid;
+}
+#cell-three {
+  border-style: solid;
+}
+#cell-four {
+  border-style: solid solid none none;
+}
+#cell-five {
+  border-style: solid none none solid;
 }
