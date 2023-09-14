@@ -4,6 +4,10 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Indie Flower", cursive;
+  box-sizing: content-box;
+}
+h1 {
+  font-size: 3rem;
 }
 main {
   text-align: center;
@@ -23,30 +27,24 @@ main {
   /* border: 1px solid black; */
   font-size: 40px;
   text-align: center;
-  vertical-align: middle;
   line-height: 100px;
   margin: 0;
   padding: 0;
   cursor: pointer;
 }
 
+.border-l {
+  border-left: 2px solid black;
+}
+
+.border-r {
+  border-right: 2px solid black;
+}
+.border-btm {
+  border-bottom: 2px solid black;
+}
+
 #btn-reset {
   margin: 30px auto;
   text-align: center;
-}
-
-#cell-one {
-  border-style: none solid solid none;
-}
-#cell-two {
-  border-style: none none solid solid;
-}
-#cell-three {
-  border-style: solid;
-}
-#cell-four {
-  border-style: solid solid none none;
-}
-#cell-five {
-  border-style: solid none none solid;
 }

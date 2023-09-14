@@ -54,14 +54,19 @@ function resetBoardState() {
 
 // Function mark the board
 function handleClick(evt) {
-  turn ? (player = "X") : (player = "O");
+  turn ? (player = "X") : (player = "O"); // ternary operator
   evt.target.textContent = player;
 
-  tries--;
-  // Change the board state
-  changeBoardState(Number(evt.target.dataset.index));
   // Change Turn
   turn = !turn;
+
+
+  tries--;
+
+
+  // Change the board state
+  changeBoardState(Number(evt.target.dataset.index));
+
   // Check for Winner
   if (checkForWinner(player)) {
     document.getElementById("player-label").innerHTML = `Player ${player} won!`;
@@ -95,25 +100,21 @@ function resetBoardUI() {
 function checkForWinner(player) {
   // Check for winner Diagonally
   if (player == board[0][0] && player == board[1][1] && player == board[2][2]) {
-    console.log("Won from diagonal 1");
     return true;
   }
   if (player == board[0][2] && player == board[1][1] && player == board[2][0]) {
-    console.log("Won from diagonal 2");
     return true;
   }
 
   //Check for Horizontal Winner
   for (const val of board) {
     if (player == val[0] && player == val[1] && player == val[2]) {
-      console.log("Hortizontal");
       return true;
     }
   }
   // Check for Vertical Winner
   for (const i in board) {
     if (player == board[0][i] && player == board[1][i] && board[2][i]) {
-      console.log("Vertical");
       return true;
     }
   }
